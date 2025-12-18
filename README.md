@@ -15,7 +15,7 @@ The solution consists of two core components:
 
 ## 📦 核心组件下载
 
-* **定制版内核 (chrome.7z)**：[点击下载](https://pan.baidu.com/s/1Qqt3dAEm3F1I_Ntm0XpnWQ?pwd=vv9e) (提取码: `vv9e`)
+* **定制版内核 (chrome.7z)**：[点击下载](https://pan.baidu.com/s/12AAALtShUggMx5XIWCc-IQ)  提取码: sx84 
 * **特性**：基于 Chromium 141 深度定制，支持 `--ruyi` 参数动态加载指纹文件。
 
 ---
