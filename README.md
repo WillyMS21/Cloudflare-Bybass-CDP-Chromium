@@ -1,36 +1,22 @@
-# Chromium 141 Anti-Fingerprinting Browser
+# Cloudflare Turnstile & Fingerprint Solver (Chromium-Base)
 
-指纹浏览器（针对 FingerprintJS / Fingerprint Pro 全量通过）
+## 🌐 English Introduction
+This project provides a professional-grade solution for bypassing **Cloudflare Turnstile (5s Challenge)** and advanced fingerprinting systems like **FingerprintJS Pro**. 
 
----
-
-# 🎯 项目简介
-
-本项目基于 **Chromium 141** 深度定制，实现了一套 **全链路可编程指纹系统**，针对 FingerprintJS（含 Pro 版本）可稳定通过。浏览器支持通过外部脚本（fp.txt）动态控制几乎全部可被探测的浏览器指纹，包括：
-
-* Navigator 环境指纹（UA / platform / languages / webdriver …）
-* WebGL & Canvas 渲染指纹（GPU、扩展、纹理、着色器 …）
-* WebAudio 音频哈希指纹
-* 字体与文本排版指纹
-* 屏幕与显示参数
-* GPU Unmasked 信息
-* 扩展与扩展参数（extensionParameters）
-
-浏览器支持启动参数 `--ruyi` 指定指纹文件，实现 **真正意义上的浏览器级伪造**，而非 JS Hook。
-
-👉 **检测地址（官方 FingerprintJS Demo）**：
-[https://fingerprintjs.github.io/fingerprintjs/](https://fingerprintjs.github.io/fingerprintjs/)
+The solution consists of two core components:
+1. **Custom Chromium 141 Kernel**: A modified browser engine that implements "Zero-Hook" fingerprint spoofing at the rendering pipeline level (WebGL, Canvas, Audio, Fonts, etc.). It completely removes automation traces like `navigator.webdriver`.
+2. **CDP-Based Automation Script**: A Python-based solver that uses the Chrome DevTools Protocol (CDP) to simulate human-like physical interactions (Bezier curves, focus management, and precise physical clicks) to break through Cloudflare's verification checkboxes.
 
 ---
 
-# 📦 下载地址
+# 🎯 项目名称：如意云盾（Ruyi-Bypasser）- 自动化绕过方案
 
-浏览器已打包为 `chrome.7z`：
+本项目是针对 **Cloudflare 5秒盾/Turnstile** 以及 **FingerprintJS Pro** 高级指纹识别设计的全链路解决方案。
 
-* **网盘链接**：[https://pan.baidu.com/s/1Qqt3dAEm3F1I_Ntm0XpnWQ?pwd=vv9e](https://pan.baidu.com/s/1Qqt3dAEm3F1I_Ntm0XpnWQ?pwd=vv9e)
-* **提取码**：`vv9e`
+## 📦 核心组件下载
 
-解压后可直接使用。
+* **定制版内核 (chrome.7z)**：[点击下载](https://pan.baidu.com/s/1Qqt3dAEm3F1I_Ntm0XpnWQ?pwd=vv9e) (提取码: `vv9e`)
+* **特性**：基于 Chromium 141 深度定制，支持 `--ruyi` 参数动态加载指纹文件。
 
 ---
 
