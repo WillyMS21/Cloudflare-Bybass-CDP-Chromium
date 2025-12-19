@@ -22,15 +22,17 @@ The solution consists of two core components:
 
 # 🚀 浏览器启动方式（加载自定义指纹 fp.txt）
 
-在浏览器目录运行：
+在浏览器目录运行,指定好指纹目录，cmd运行命令启动浏览器（也可以使用任意脚本启动）：
 
 ```bash
 chrome.exe 
-  --enable-webgl --ignore-gpu-blocklist --enable-unsafe-webgl --no-sandbox \
-    --ruyi="{\"ruyiFile\":\"C:\\chromiun141\\fp.txt\",\"httpuser\":\"xxx-res_BR-Minas+Gerais\",\"httppwd\":\"xxxxx\"}"   \
-	--proxy-server="http://xxx.com:1288"  \
-	https://browserleaks.com/ip
+  chrome.exe --remote-debugging-port=9222 \
+  --user-data-dir="C:\Users\Administrator\Desktop\chrome\Chrome-bin\testcdp" \
+  --remote-allow-origins=*  --no-sandbox --ruyi="{\"ruyiFile\":\"E:\\pycode\\ruyicdp\\fp.txt\"}"
+
 ```
+
+然后使用CDP命令即可控制。
 
 说明：
 
